@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"></android.support.v7.widget.Toolbar>
+
+
+    <!--内容显示-->
+    <FrameLayout
+        android:id="@+id/main_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <lin.com.lin.base.LBaseViewPager
+        android:id="@+id/main_contain_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+
+        <!--底部TAB-->
+        <LinearLayout
+            android:id="@+id/main_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_tab_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/main_tab_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <lin.com.lin.View.IconTextView
+                    android:id="@+id/main_tab_all_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_all_icon"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_icon_size" />
+
+                <TextView
+                    android:id="@+id/main_tab_all_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_all_text"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_default_color" />
+
+            <LinearLayout
+                android:id="@+id/main_tab_recent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <lin.com.lin.View.IconTextView
+                    android:id="@+id/main_tab_recent_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_recent_icon"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_icon_size" />
+
+                <TextView
+                    android:id="@+id/main_tab_recent_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_recent_text"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_default_color" />
+
+            <LinearLayout
+                android:id="@+id/main_tab_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <lin.com.lin.View.IconTextView
+                    android:id="@+id/main_tab_recommend_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_recommend_icon"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_icon_size" />
+
+                <TextView
+                    android:id="@+id/main_tab_recommend_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/main_recommend_text"
+                    android:textColor="@color/tab_default_color"
+                    android:textSize="@dimen/main_tab_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>
+

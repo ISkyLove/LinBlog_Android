@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white_smoke"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/recent_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/img_book1" />
+
+    <View
+        android:id="@+id/recent_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+
+    <View
+        android:id="@+id/recent_list_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_smoke" />
+
+    <lin.com.observablescrollviewlibrary.observablescrollview.ObservableRecyclerView
+        android:id="@+id/recent_recycler"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_standard"
+        android:paddingLeft="@dimen/margin_standard"
+        android:paddingStart="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/recent_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@color/accent"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</FrameLayout>

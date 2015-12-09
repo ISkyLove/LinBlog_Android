@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_short"
+                android:layout_marginRight="@dimen/margin_short"
+                android:background="#99ffffff" />
+
+            <Spinner
+                android:id="@+id/spinner_toolbar"
+                style="@style/Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:windowContentOverlay">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>

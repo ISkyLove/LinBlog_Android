@@ -1,0 +1,81 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <lin.com.observablescrollviewlibrary.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:id="@+id/webViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scrollbars="none"
+                />
+        </FrameLayout>
+
+    </lin.com.observablescrollviewlibrary.observablescrollview.ObservableScrollView>
+
+    <View
+        android:id="@+id/flexible_space"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary"/>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"/>
+
+    <!--
+    android:layout_marginLeft on FrameLayout seems to be ignored on Android 2.3
+    so add a parent RelativeLayout and set padding to it.
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/toolbar_margin_start">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_height"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

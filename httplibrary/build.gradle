@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.0'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+    }
+}
+
+dependencies {
+    compile 'cz.msebera.android:httpclient:4.3.6'
+    compile 'com.squareup.okhttp:okhttp:2.6.0'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.google.code.gson:gson:2.5'
+}
+
+
+
+

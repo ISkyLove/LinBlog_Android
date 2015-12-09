@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/recent_item_height"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_margin="2dp"
+        android:id="@+id/recent_item_img"
+        android:layout_width="@dimen/recent_item_height"
+        android:layout_height="@dimen/recent_item_height"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/img_book2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recent_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_horizontal"
+            android:text="标题"
+            android:paddingBottom="3dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_70"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:id="@+id/recent_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_horizontal"
+            android:text="暖色调弄法拉克等蝴蝶结奥斯卡疯狂的打算考冷风机阿杜付了款"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/font_media" />
+    </LinearLayout>
+</LinearLayout>

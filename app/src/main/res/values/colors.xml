@@ -1,0 +1,18 @@
+
+<resources>
+
+    <color name="primary">#009688</color>
+    <color name="primaryDark">#00796b</color>
+    <color name="accent">#eeff41</color>
+    <color name="accentLight">#F4FF81</color>
+    <color name="white">#ffffff</color>
+    <color name="white_smoke">#f0f0f0</color>
+    <color name="black_70">#b32b2b2b</color>
+    <color name="white_70">#b3ffffff</color>
+    <color name="black_50">#77000000</color>
+
+    <color name="tab_default_color">#009688</color>
+    <color name="tab_focus_color">#00796b</color>
+
+
+</resources>
